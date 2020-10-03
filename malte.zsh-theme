@@ -122,10 +122,3 @@ RPROMPT='$(nvm_prompt_info) $(bureau_git_prompt)'
 
 autoload -U add-zsh-hook
 add-zsh-hook precmd bureau_precmd
-
-function zle-keymap-select {
-  PROMPT='${${KEYMAP/vicmd/> $_LIBERTY_NORMAL }/(main|viins)/> $_LIBERTY_INSERT }'
-  zle reset-prompt
-}
-
-zle -N zle-keymap-select
